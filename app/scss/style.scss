@@ -1,20 +1,24 @@
 @import 'vars';
 @import 'global';
 @import 'fonts';
+
 .header__top-inner {
     display: flex;
     justify-content: space-between;
     height: 90px;
     align-items: center;
 }
+
 .header__text {
     margin-left: auto;
     margin-right: 50px;
+
     span {
         color: $red;
         font-weight: 700;
     }
 }
+
 .header__btn {
     padding: 4px;
     width: 72px;
@@ -23,30 +27,105 @@
     color: #fff;
     font-size: 12px;
 }
+
 .header__btn-login {
     background-color: $green;
 }
+
 .header__btn-register {
     background-color: $red;
     margin-left: 7px;
 }
+
 .header__menu {
     background-color: $bg;
 }
+
 .menu {
     display: flex;
     align-items: center;
     height: 60px;
 }
+
 .menu__list {
     li {
         display: inline-block;
-        & + li {
+
+        &+li {
             margin-left: 30px;
         }
     }
+
     a {
         font-size: 14px;
         color: #fff;
+    }
+}
+
+.search {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 533px;
+}
+
+.search__inner {
+    padding: 155px 0 100px;
+    color: #fff;
+    text-align: center;
+
+    &-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 28px;
+        line-height: 10px;
+    }
+
+    &-text {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        line-height: 30px;
+    }
+
+    &-form {
+        max-width: 670px;
+        margin: 0 auto;
+        position: relative;
+        input {
+            display: block;
+            width: 100%;
+            box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+            border-radius: 4px;
+            height: 56px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            outline: none;
+            padding-left: 25px;
+            padding-right: 60px;
+
+            // Тут я у меня появился не красивый бордер при фокусе..Ну я как настоящий топовый дизайнер)Настоящий!:D Всё починил)
+            &:focus {
+                box-shadow: 0px 1px 10px 0px rgba(6, 63, 221, 0.911);
+            }
+
+            &::placeholder {
+                color: #90a4ae;
+                font-weight: 500;
+            }
+        }
+        button {
+            position: absolute;
+            border: none;
+            background-color: transparent;
+            right: 20px;
+            top: 16px;
+            outline: none;
+            // Ну тут тоже красота
+            &:focus {
+                box-shadow: 0px 1px 10px 0px rgba(6, 63, 221, 0.911);
+            }
+        }
     }
 }
